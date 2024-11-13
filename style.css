@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #faf3e0;
+    border: 5px solid #3a3a3a;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.clock, .weather, .date, .prayer-times, .buttons {
+    margin: 10px 0;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

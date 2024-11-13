@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Holidays</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Islamic Holidays</h2>
+        <div id="holidays"></div>
+
+        <!-- Back Button -->
+        <div class="buttons">
+            <a href="index.html"><button>Back to Home</button></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function displayIslamicHolidays() {
+            const holidays = [
+                { name: "Eid al-Fitr", approximateDate: "1 Shawwal" },
+                { name: "Eid al-Adha", approximateDate: "10 Dhu al-Hijjah" },
+                { name: "Islamic New Year", approximateDate: "1 Muharram" },
+                { name: "Mawlid al-Nabi (Prophet's Birthday)", approximateDate: "12 Rabi' al-awwal" },
+            ];
+
+            let holidayList = "<ul>";
+            holidays.forEach(holiday => {
+                holidayList += `<li>${holiday.name} - ${holiday.approximateDate}</li>`;
+            });
+            holidayList += "</ul>";
+            document.getElementById('holidays').innerHTML = holidayList;
+        }
+
+        displayIslamicHolidays();
+    </script>
+</body>
+</html>

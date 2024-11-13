@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qibla Direction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Qibla Direction</h2>
+        <div class="qibla" id="qibla"></div>
+
+        <!-- Back Button -->
+        <div class="buttons">
+            <a href="index.html"><button>Back to Home</button></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        async function fetchQiblaDirection() {
+            const latitude = 28.3512;
+            const longitude = 77.5551;
+            const response = await fetch(`https://api.aladhan.com/v1/qibla/${latitude}/${longitude}`);
+            const data = await response.json();
+            const direction = data.data.direction;
+            document.getElementById('qibla').innerText = `Qibla Direction: ${direction.toFixed(2)}°`;
+        }
+        fetchQiblaDirection();
+    </script>
+</body>
+</html>
